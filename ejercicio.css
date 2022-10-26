@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+@font-face {
+  font-family: "inter thin";
+  src: url("C:\Users\Usuario\OneDrive\Escritorio\news-homepage-main\assets\fonts\Inter-VariableFont_slnt,wght.ttf")
+    format("ttf");
+}
+@font-face {
+  font-family: "inter";
+  src: url("C:\Users\Usuario\OneDrive\Escritorio\kevinejercicio\fonts\Inter-ExtraBold.ttf")
+    format("ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: hsl(233, 8%, 79%);
+}
+hr {
+  margin: 1rem;
+  width: 15.6rem;
+}
+p {
+  padding: 10px;
+  color: hsl(240, 2%, 67%);
+}
+h3 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2.3rem;
+  padding: 0.6rem;
+  text-align: start;
+}
+h5 {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0.6rem;
+}
+h5:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.nav1 {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+.logo {
+  margin-left: 20rem;
+  margin-top: 7.5rem;
+}
+.lista {
+  display: flex;
+  align-self: flex-end;
+  width: 100%;
+  margin-right: 20rem;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  color: darkgrey;
+}
+a:hover{
+    color:rgb(204, 142, 26)
+}
+.noticias {
+  display: grid;
+  grid-template-areas: "imagen1 imagen1 news"
+                       "imagen1 imagen1 news"
+                       "masinfo3 masinfo news";
+  grid-template-columns: 30rem 30rem 18.75rem;
+  grid-template-rows: 12.5rem 12.5rem 12.5rem;
+  gap: 15px;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  margin-top: 3.1rem;
+  justify-content: flex-end;
+}
+.imagen1 {
+  grid-area: imagen1;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+.img2 {
+  width: 60em;
+  height: 25em;
+}
+.news {
+  grid-area:news;
+  background-color: black;
+  color: hsl(233, 8%, 79%);
+  grid-column-start: 3;
+  grid-row: 1 / span 3;
+  font-family: "inter";
+  padding: 0.6rem;
+}
+.masinfo3 {
+  grid-area:masinfo3;
+  font-family: "inter";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 25pt;
+  text-align: start;
+  color: black;
+}
+.masinfo {
+  grid-area:masinfo;
+  font-family: "inter";
+  font-size: 12pt;
+  color: rgb(112, 111, 111);
+  grid-column: 1 2;
+  text-align: start;
+}
+.texto {
+  padding: 0;
+}
+.boton {
+  display: inline-flex;
+  align-items: flex-end;
+  height: 5.6rem;
+}
+button {
+  background-color: hsl(5, 85%, 63%);
+  color: white;
+  border: none;
+  width: 9.78rem;
+  height: 3.17rem;
+  font-family: "inter";
+  font-size: 13pt;
+}
+button:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.lista2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  margin-top: 2.5rem;
+  margin-bottom: 20rem;
+}
+.imageneslista {
+  width: 7.5rem;
+  float: left;
+  padding: 10pt;
+}
+.tituloslista:hover{
+    color:hsl(5, 85%, 63%) ;
+    cursor: pointer;
+}
+.tituloslista {
+  font-size: 14pt;
+  color: hsl(0, 0%, 15%);
+}
+
+@media screen and(max-width:560px) {
+  .noticias{
+    
+    grid-template-areas:
+    "imagen1"
+    "news"
+    "masinfo3"
+    "masinfo";
+    grid-template-columns: 10rem;
+    grid-template-rows: 5rem 5rem 5rem 5rem;
+ 
+}
+.lista2 {
+ 
+  flex-direction:column;
+}
+}
